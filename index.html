@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Helikopter Kurtarma Oyunu</title>
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      height: 100%;
+    }
+    #myCanvas {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: url("assets/background.jpg") no-repeat center center;
+      background-size: cover;
+    }
+    #bilgiPaneli {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      color: #141414;
+      font-family: Arial, sans-serif;
+      font-size: 20px;
+    }
+    #bilgiPaneli span {
+      margin-right: 20px;
+    }
+    #total{
+      color: red;
+    }
+  </style>
+</head>
+<body onload="init()">
+  
+  <canvas id="myCanvas"></canvas>
+
+  <div id="bilgiPaneli">
+    <span>Skor: <span id="skor">0</span></span>
+    <span>Helikopter Can: <span id="can">3</span></span>
+    <span>Motor: <span id="motorDurumu">Kapalı</span></span>
+    <span>Mermi: <span id="mermi">5</span></span> 
+    <span>Sivil: <span id="yerde">0</span><span id="total">/ 20</span></span>
+  </div>
+  <script src="./src/variables.js"></script>
+  <script src="./src/collisions.js"></script>
+  <script src="./src/crowd.js"></script>
+  <script src="./src/spawn.js"></script>
+  <script src="./src/tank.js"></script>
+  <script src="./src/bullets.js"></script>
+  <script src="./src/pickup.js"></script>
+  <script src="./src/movement.js"></script>
+  <script src="./src/game_loop.js"></script>
+  <script src="./src/init.js"></script>
+</body>
+</html>
